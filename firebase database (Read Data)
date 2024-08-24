@@ -1,3 +1,5 @@
+-- Need turn on [Allow HTTP Requests] in GameSettings Security to work
+
 local Secret = "YOUR_FIREBASE_SECRET_HERE"
 local URL = "YOUR_FIREBASE_URL_HERE"
 local database = URL..".json?auth="..Secret
