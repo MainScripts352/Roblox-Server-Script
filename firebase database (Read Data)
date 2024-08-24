@@ -1,0 +1,11 @@
+local Secret = "YOUR_FIREBASE_SECRET_HERE"
+local URL = "YOUR_FIREBASE_URL_HERE"
+local database = URL..".json?auth="..Secret
+local data = game.HttpService:JSONDecode(game.HttpService:GetAsync(database))
+
+-- data.Parent.Name.Key --(use this method to get message)
+
+local message = Instance.new("Message",workspace)
+message.Text = ""..data.Parent.Name.Key
+wait(3)
+message:Destroy()
